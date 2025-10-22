@@ -1,0 +1,26 @@
+<section class="container" aria-labelledby="list-title">
+    <header class="list__header">
+        <h1 id="list-title">Artículos y guías</h1>
+        <p class="dim">Herramientas, comparativas y tutoriales para autónomos y negocios pequeños.</p>
+    </header>
+
+    <div *ngIf="loading" class="skeleton">
+        <div class="skeleton__card" *ngFor="let i of [1,2,3,4,5,6]"></div>
+    </div>
+
+    <ul *ngIf="!loading" class="cards grid grid--cards" role="list">
+        <li class="cards__item" *ngFor="let p of posts; trackBy: trackBySlug" role="listitem">
+            <a [routerLink]="['/post', p.slug]" class="card__link" [attr.aria-label]="'Leer: ' + p.title">
+                <figure class="card__media" *ngIf="p.cover">
+                    <img [src]="p.cover" [alt]="p.title" loading="lazy" decoding="async" [attr.width]="640"
+                        [attr.height]="360">
+                </figure>
+                <div class="card__body">
+                    <h2 class="card__title">{{ p.title }}</h2>
+                    <p class="dim card__excerpt">{{ p.excerpt }}</p>
+                    <p class="dim card__date">Publicado: {{ p.publishedAt | date:'longDate' }}</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>

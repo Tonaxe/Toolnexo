@@ -1,0 +1,17 @@
+<div *ngIf="loading" class="preview-skeleton">
+    <div class="preview-skeleton__card" *ngFor="let i of [1,2,3,4,5,6]"></div>
+</div>
+
+<ul *ngIf="!loading" class="cards grid grid--cards" role="list" aria-label="Últimos artículos">
+    <li class="cards__item" *ngFor="let p of posts; trackBy: trackBySlug" role="listitem">
+        <a [routerLink]="['/post', p.slug]" class="card__link" [attr.aria-label]="'Leer: ' + p.title">
+            <figure class="card__media" *ngIf="p.cover">
+                <img [src]="p.cover" [alt]="p.title" loading="lazy" decoding="async" [attr.width]="640" [attr.height]="360">
+            </figure>
+            <div class="card__body">
+                <h3 class="card__title">{{ p.title }}</h3>
+                <p class="dim card__excerpt">{{ p.excerpt }}</p>
+            </div>
+        </a>
+    </li>
+</ul>

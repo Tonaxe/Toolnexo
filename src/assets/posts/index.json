@@ -1,0 +1,133 @@
+[
+    {
+        "slug": "top-herramientas-2025",
+        "title": "Top 10 herramientas gratuitas para autónomos en 2025",
+        "excerpt": "Selección de apps y servicios gratuitos para facturar, organizar clientes, proyectos y marketing sin gastar.",
+        "cover": "assets/images/art1.png",
+        "contentHtmlPath": "assets/posts/top-herramientas-2025.html",
+        "publishedAt": "2025-10-01T09:00:00.000Z",
+        "tags": [
+            "herramientas",
+            "autónomos",
+            "gratis"
+        ]
+    },
+    {
+        "slug": "apps-facturacion-gratis",
+        "title": "Las mejores apps de facturación gratuitas (sin ser contable)",
+        "excerpt": "Opciones simples para crear facturas, presupuestos y llevar el control de cobros sin complicaciones.",
+        "cover": "assets/images/art2.png",
+        "contentHtmlPath": "assets/posts/apps-facturacion-gratis.html",
+        "publishedAt": "2025-10-02T09:00:00.000Z",
+        "tags": [
+            "facturación",
+            "contabilidad",
+            "gratis"
+        ]
+    },
+    {
+        "slug": "crm-gratuito-autonomos",
+        "title": "Cómo gestionar a tus clientes con un CRM gratuito para autónomos",
+        "excerpt": "Organiza contactos, oportunidades y tareas con herramientas sin coste.",
+        "cover": "assets/images/art3.png",
+        "contentHtmlPath": "assets/posts/crm-gratuito-autonomos.html",
+        "publishedAt": "2025-10-03T09:00:00.000Z",
+        "tags": [
+            "crm",
+            "clientes",
+            "gratis"
+        ]
+    },
+    {
+        "slug": "presupuestos-online-gratis",
+        "title": "5 herramientas para crear presupuestos online gratis",
+        "excerpt": "Genera presupuestos profesionales en minutos y envíalos por email desde el navegador.",
+        "cover": "assets/images/art4.png",
+        "contentHtmlPath": "assets/posts/presupuestos-online-gratis.html",
+        "publishedAt": "2025-10-04T09:00:00.000Z",
+        "tags": [
+            "presupuestos",
+            "ventas",
+            "gratis"
+        ]
+    },
+    {
+        "slug": "control-gastos-ingresos-autonomos",
+        "title": "Las 7 mejores apps para controlar gastos e ingresos si eres autónomo",
+        "excerpt": "Controla tus finanzas con apps gratuitas y reportes claros.",
+        "cover": "assets/images/art5.png",
+        "contentHtmlPath": "assets/posts/control-gastos-ingresos-autonomos.html",
+        "publishedAt": "2025-10-05T09:00:00.000Z",
+        "tags": [
+            "finanzas",
+            "gastos",
+            "ingresos"
+        ]
+    },
+    {
+        "slug": "notion-para-negocios",
+        "title": "Cómo usar Notion para organizar tu negocio (plantillas gratis)",
+        "excerpt": "Tableros, bases de datos y dashboards en Notion para tu día a día.",
+        "cover": "assets/images/art6.png",
+        "contentHtmlPath": "assets/posts/notion-para-negocios.html",
+        "publishedAt": "2025-10-06T09:00:00.000Z",
+        "tags": [
+            "notion",
+            "productividad",
+            "plantillas"
+        ]
+    },
+    {
+        "slug": "trello-vs-asana",
+        "title": "Trello vs Asana: ¿cuál conviene para tu pequeño negocio?",
+        "excerpt": "Comparativa directa de funciones, curvas de aprendizaje y límites del plan gratuito.",
+        "cover": "assets/images/art7.png",
+        "contentHtmlPath": "assets/posts/trello-vs-asana.html",
+        "publishedAt": "2025-10-07T09:00:00.000Z",
+        "tags": [
+            "proyectos",
+            "trello",
+            "asana",
+            "comparativa"
+        ]
+    },
+    {
+        "slug": "generador-facturas-gratis",
+        "title": "10 generadores de facturas online gratis (PDF al instante)",
+        "excerpt": "Rellena, descarga y envía tu factura en PDF sin registros complicados.",
+        "cover": "assets/images/art8.png",
+        "contentHtmlPath": "assets/posts/generador-facturas-gratis.html",
+        "publishedAt": "2025-10-08T09:00:00.000Z",
+        "tags": [
+            "facturas",
+            "pdf",
+            "gratis"
+        ]
+    },
+    {
+        "slug": "crear-web-gratis-negocio",
+        "title": "Cómo crear una web gratis para tu negocio (paso a paso sin programar)",
+        "excerpt": "Elige la plataforma adecuada, diseña lo esencial y publica en un día.",
+        "cover": "assets/images/art9.png",
+        "contentHtmlPath": "assets/posts/crear-web-gratis-negocio.html",
+        "publishedAt": "2025-10-09T09:00:00.000Z",
+        "tags": [
+            "web",
+            "nocode",
+            "gratis"
+        ]
+    },
+    {
+        "slug": "bancos-digitales-autonomos-espana",
+        "title": "Mejores bancos digitales para autónomos en España (comisiones y extras)",
+        "excerpt": "Cuentas online con IBAN español, subcuentas y compatibilidad con facturación.",
+        "cover": "assets/images/art10.png",
+        "contentHtmlPath": "assets/posts/bancos-digitales-autonomos-espana.html",
+        "publishedAt": "2025-10-10T09:00:00.000Z",
+        "tags": [
+            "banca",
+            "autónomos",
+            "españa"
+        ]
+    }
+]

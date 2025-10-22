@@ -1,0 +1,17 @@
+<article class="container post">
+    <nav class="post__back" aria-label="Volver">
+        <a routerLink="/posts">← Volver a artículos</a>
+    </nav>
+
+    <div #contentRef class="post__content card" [innerHTML]="html"></div>
+
+    <aside class="post__related card" aria-label="Artículos relacionados">
+        <h2>También te puede interesar</h2>
+        <ul>
+            <li><a routerLink="/post/top-herramientas-2025">Top 10 herramientas gratuitas para autónomos en 2025</a>
+            </li>
+            <li><a routerLink="/post/apps-facturacion-gratis">Apps de facturación gratuitas</a></li>
+            <li><a routerLink="/post/crm-gratuito-autonomos">CRM gratuito para autónomos</a></li>
+        </ul>
+    </aside>
+</article>

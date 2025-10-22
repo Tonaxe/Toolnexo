@@ -1,0 +1,54 @@
+.post__back {
+    margin: 6px 0 10px;
+}
+
+.post__content {
+    padding: 22px;
+    line-height: 1.7;
+    font-size: 17px;
+
+    p {
+        margin: 10px 0;
+    }
+
+    h2 {
+        margin-top: 22px;
+    }
+
+    h3 {
+        margin-top: 14px;
+    }
+
+    nav[aria-label="Índice"] {
+        margin: 12px 0 18px;
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: #0c121b;
+    }
+
+    a {
+        word-break: break-word;
+    }
+
+    img {
+        display: block;
+        margin: 10px 0;
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+}
+
+.post__related {
+    margin-top: 24px;
+    padding: 16px;
+}
+
+.post__related h2 {
+    margin: 0 0 10px;
+}
+
+.post__content [id]{
+  scroll-margin-top: 84px;
+}

@@ -1,1 +1,168 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --container: 1100px;
+    --bg: #0b0f14;
+    --card: #121821;
+    --card-2: #0e131b;
+    --text: #e6edf3;
+    --muted: #97a3b0;
+    --brand: #6ea8ff;
+    --accent: #22d3ee;
+    --border: #223042;
+    --link: #8ab4ff;
+    --shadow: 0 10px 25px rgba(0, 0, 0, .35);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue";
+    background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(110, 168, 255, .15), transparent 60%),
+        radial-gradient(1000px 600px at 10% 110%, rgba(34, 211, 238, .10), transparent 60%),
+        var(--bg);
+    color: var(--text);
+    background-attachment: fixed, fixed, scroll;
+    background-repeat: no-repeat;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -20vh;
+    height: 40vh;
+    pointer-events: none;
+    background: radial-gradient(60vw 25vh at 50% 100%, rgba(34, 211, 238, .12), transparent 70%);
+    z-index: 0;
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 24px
+}
+
+.dim {
+    color: var(--muted)
+}
+
+a {
+    color: var(--link);
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, #182131, #111826);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 10px;
+    box-shadow: var(--shadow)
+}
+
+.btn:hover {
+    border-color: #2a3b51
+}
+
+.btn--primary {
+    border-color: transparent;
+    background: linear-gradient(180deg, #2b5aa8, #1e3a8a)
+}
+
+.card {
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow)
+}
+
+.grid {
+    display: grid;
+    gap: 20px
+}
+
+.grid--cards {
+    grid-template-columns: repeat(12, 1fr)
+}
+
+.hide-visually {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px
+}
+
+h1 {
+    font-size: clamp(28px, 3.6vw, 40px);
+    line-height: 1.1;
+    margin: 0 0 10px
+}
+
+h2 {
+    font-size: clamp(22px, 2.4vw, 28px);
+    margin: 26px 0 8px
+}
+
+h3 {
+    font-size: 18px;
+    margin: 18px 0 8px
+}
+
+ul,
+ol {
+    padding-left: 20px
+}
+
+li {
+    margin: 6px 0
+}
+
+pre {
+    background: #0f1520;
+    border: 1px solid #1e2a3b;
+    border-radius: 12px;
+    padding: 14px;
+    overflow: auto
+}
+
+@media (max-width: 860px) {
+    .container {
+        padding: 18px
+    }
+
+    .grid--cards {
+        grid-template-columns: 1fr
+    }
+}
