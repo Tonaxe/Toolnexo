@@ -31,7 +31,7 @@
               "src/robots.txt",
               "src/ads.txt",
               "src/sitemap.xml",
-              "src/_redirects" 
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.scss"
