@@ -5,11 +5,17 @@
             <span class="brand__name">Toolnexo</span>
         </a>
 
-        <nav class="nav" aria-label="Principal">
-            <a routerLink="/posts">Artículos</a>
-            <a routerLink="/aviso-legal">Aviso legal</a>
-            <a routerLink="/privacidad">Privacidad</a>
-            <a routerLink="/cookies">Cookies</a>
+        <button class="hamburger" aria-label="Menú principal" aria-expanded="false" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" [class.active]="menuOpen" aria-label="Principal">
+            <a routerLink="/posts" (click)="closeMenu()">Artículos</a>
+            <a routerLink="/aviso-legal" (click)="closeMenu()">Aviso legal</a>
+            <a routerLink="/privacidad" (click)="closeMenu()">Privacidad</a>
+            <a routerLink="/cookies" (click)="closeMenu()">Cookies</a>
         </nav>
     </div>
 </header>

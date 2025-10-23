@@ -8,10 +8,11 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink, ParamMap } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { PostService } from '../../../core/posts/post.service';
 import { SeoService } from '../../../core/seo/seo.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-post-detail',
@@ -28,6 +29,7 @@ export class PostDetailComponent implements OnInit, OnDestroy {
   slug = '';
 
   private anchorClickHandler?: (ev: Event) => void;
+  private routeSub?: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -37,10 +39,15 @@ export class PostDetailComponent implements OnInit, OnDestroy {
     @Inject(PLATFORM_ID) private platformId: Object
   ) { }
 
-  async ngOnInit() {
-    this.slug = this.route.snapshot.paramMap.get('slug')!;
+  ngOnInit(): void {
+    this.routeSub = this.route.paramMap.subscribe(async (params: ParamMap) => {
+      this.slug = params.get('slug')!;
+      await this.loadPost(this.slug);
+    });
+  }
 
-    const { post, html } = await this.ps.getBySlug(this.slug);
+  private async loadPost(slug: string): Promise<void> {
+    const { post, html } = await this.ps.getBySlug(slug);
     this.title = post.title;
     this.html = this.sanitizer.bypassSecurityTrustHtml(html);
 
@@ -73,7 +80,10 @@ export class PostDetailComponent implements OnInit, OnDestroy {
         publisher: {
           '@type': 'Organization',
           name: 'Toolnexo',
-          logo: { '@type': 'ImageObject', url: 'https://toolnexo.es/assets/logo.png' },
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://toolnexo.es/assets/logo.png',
+          },
         },
         ...(ogImg ? { image: [ogImg] } : {}),
         mainEntityOfPage: url,
@@ -86,7 +96,12 @@ export class PostDetailComponent implements OnInit, OnDestroy {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Artículos', item: 'https://toolnexo.es/posts' },
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Artículos',
+            item: 'https://toolnexo.es/posts',
+          },
           { '@type': 'ListItem', position: 2, name: post.title, item: url },
         ],
       },
@@ -101,8 +116,9 @@ export class PostDetailComponent implements OnInit, OnDestroy {
         setTimeout(() => {
           const root = this.contentRef?.nativeElement;
           const el =
-            root?.querySelector<HTMLElement>(`#${CSS?.escape ? CSS.escape(hash) : hash}`) ||
-            document.getElementById(hash);
+            root?.querySelector<HTMLElement>(
+              `#${CSS?.escape ? CSS.escape(hash) : hash}`
+            ) || document.getElementById(hash);
           el?.scrollIntoView({ behavior: 'auto', block: 'start' });
         }, 0);
       }
@@ -114,11 +130,14 @@ export class PostDetailComponent implements OnInit, OnDestroy {
     if (root && this.anchorClickHandler) {
       root.removeEventListener('click', this.anchorClickHandler);
     }
+
+    this.routeSub?.unsubscribe();
   }
 
   private bindAnchorScrolling(): void {
     const root = this.contentRef?.nativeElement;
     if (!root) return;
+
     this.anchorClickHandler = (ev: Event) => {
       const target = ev.target as HTMLElement | null;
       const link = target?.closest?.('a[href^="#"]') as HTMLAnchorElement | null;
@@ -127,8 +146,9 @@ export class PostDetailComponent implements OnInit, OnDestroy {
       const href = link.getAttribute('href')!;
       const id = decodeURIComponent(href.slice(1));
       const el =
-        root.querySelector<HTMLElement>(`#${CSS?.escape ? CSS.escape(id) : id}`) ||
-        document.getElementById(id);
+        root.querySelector<HTMLElement>(
+          `#${CSS?.escape ? CSS.escape(id) : id}`
+        ) || document.getElementById(id);
       if (!el) return;
 
       ev.preventDefault();
