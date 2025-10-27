@@ -1,15 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
- <url><loc>https://toolnexo.es/</loc></url>
- <url><loc>https://toolnexo.es/posts</loc></url>
- <url><loc>https://toolnexo.es/post/top-herramientas-2025</loc></url>
- <url><loc>https://toolnexo.es/post/apps-facturacion-gratis</loc></url>
- <url><loc>https://toolnexo.es/post/crm-gratuito-autonomos</loc></url>
- <url><loc>https://toolnexo.es/post/presupuestos-online-gratis</loc></url>
- <url><loc>https://toolnexo.es/post/control-gastos-ingresos-autonomos</loc></url>
- <url><loc>https://toolnexo.es/post/notion-para-negocios</loc></url>
- <url><loc>https://toolnexo.es/post/trello-vs-asana</loc></url>
- <url><loc>https://toolnexo.es/post/generador-facturas-gratis</loc></url>
- <url><loc>https://toolnexo.es/post/crear-web-gratis-negocio</loc></url>
- <url><loc>https://toolnexo.es/post/bancos-digitales-autonomos-espana</loc></url>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://toolnexo.es/</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/posts</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/top-herramientas-2025</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/apps-facturacion-gratis</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/crm-gratuito-autonomos</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/presupuestos-online-gratis</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/control-gastos-ingresos-autonomos</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/notion-para-negocios</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/trello-vs-asana</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/generador-facturas-gratis</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/crear-web-gratis-negocio</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolnexo.es/post/bancos-digitales-autonomos-espana</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
